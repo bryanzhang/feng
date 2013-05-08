@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Sensation</title>
+
+	<!-- Mobile Specific
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" type="text/css"  href="css/style.css">
+	
+	<!-- Web Fonts
+  ================================================== -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	
+	<!-- JS
+  ================================================== -->
+  	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script src='js/twitter.js'></script>
+	<script type="text/javascript">
+		jQuery.noConflict();
+		jQuery(document).ready(function($){
+
+					// Create the dropdown bases
+					$("<select />").appendTo("#navigation");
+					
+					// Create default option "Go to..."
+					$("<option />", {
+					   "selected": "selected",
+					   "value"   : "",
+					   "text"    : "Menu"
+					}).appendTo("#navigation select");
+					
+					
+					// Populate dropdowns with the first menu items
+					$("#navigation li a").each(function() {
+						var el = $(this);
+						$("<option />", {
+							"value"   : el.attr("href"),
+							"text"    : el.text()
+						}).appendTo("#navigation select");
+					});
+					
+					//make responsive dropdown menu actually work			
+					$("#navigation select").change(function() {
+						window.location = $(this).find("option:selected").val();
+					});
+
+			});
+	</script>
+	
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->	
+
+	<!-- Contact Form Validation - Motools -->	
+	<script type="text/javascript" language="javascript" src="js/contact/m14_p.js"></script> 
+	<script type="text/javascript" language="javascript" src="js/contact/m14_m.js"></script>
+	<script type="text/javascript" language="javascript" src="js/contact/formcheck.js"></script>
+	<script type="text/javascript" language="javascript" src="js/contact/add.js"></script>
+
+	
+</head>
+<body>
+
+	<!-- Primary Page Layout
+	================================================== -->
+	
+	<!-- Header -->
+	<div id="header">
+	
+		<!-- 960 Container -->
+		<div class="container">
+		
+			<!-- Logo -->
+			<div class="four columns">
+					<div id="logo"><a href="index-2.html"><img src="images/logo.png" alt="" /></a></div>
+			</div>
+			
+			<div class="twelve columns">
+			
+				<!-- Menu -->
+				<div id="navigation">
+				  <ul>
+					<li><a href="index-2.html">Home</a></li>
+					<li><a href="#">Features</a>
+						<ul>
+							<li><a href="about.html">About Us</a></li>
+							<li><a href="services.html">Services</a></li>
+							<li><a href="testimonials.html">Testimonials</a></li>
+							<li><a href="pricing_tables.html">Pricing Table</a></li>
+							<li><a href="shortcodes.html">Shortcodes</a></li>
+							<li><a href="text_columns.html">Text Columns</a></li>
+							<li><a href="blog_post.html">Single Blog Post</a></li>
+							<li><a href="#">3rd Level</a>
+								<ul>
+									<li><a href="#">Just an</a></li>
+									<li><a href="#">3rd Level</a></li>
+									<li><a href="#">Menu Example</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="portfolio_3.html">Portfolio</a>
+						<ul>
+							<li><a href="portfolio_2.html">2 Columns</a></li>
+							<li><a href="portfolio_3.html">3 Columns</a></li>
+							<li><a href="portfolio_4.html">4 Columns</a></li>
+							<li><a href="single_project.html">Single Project</a></li>
+						</ul>
+					</li>
+					<li><a href="blog.html">Blog</a></li>
+					<li><a id="current" href="contact.html">Contact</a></li>
+				  </ul>
+				</div>			
+	
+			</div>
+		</div>
+	</div><!-- End Header -->
+	
+	<!-- Page Subtitle -->
+	<div id="subtitle">
+	
+		<!-- 960 Container -->
+		<div class="container">
+			<div class="sixteen columns">
+				<h3>Contact</h3>
+			</div>
+		</div>
+		<!-- End 960 Container -->
+	
+	</div><!-- End Page Subtitle -->
+	
+	<!-- 960 Container -->
+	<div class="container">
+	
+		<!-- Google Map -->
+		<div class="sixteen columns">
+			<h3 class="page_headline">See Our Location On Map</h3>
+			<div id="google_map" class="embed">
+				<iframe width="640" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=seattle&amp;aq=&amp;sll=22.447841,114.109497&amp;sspn=0.448038,0.550003&amp;vpsrc=0&amp;ie=UTF8&amp;hq=&amp;hnear=%E0%B8%8B%E0%B8%B5%E0%B9%81%E0%B8%AD%E0%B8%95%E0%B9%80%E0%B8%97%E0%B8%B4%E0%B8%A5+King,+%E0%B8%A3%E0%B8%B1%E0%B8%90%E0%B8%A7%E0%B8%AD%E0%B8%8A%E0%B8%B4%E0%B8%87%E0%B8%95%E0%B8%B1%E0%B8%99+%E0%B8%AA%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%90%E0%B8%AD%E0%B9%80%E0%B8%A1%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2&amp;t=m&amp;z=12&amp;ll=47.60621,-122.332071&amp;output=embed"></iframe>
+			</div>
+		</div><!-- End Google Map-->
+
+		<!-- Contact Form -->
+		<div class="twelve columns">
+			<h3 class="page_headline">Let's Keep in Touch</h3>
+			
+			<div class="page_content">
+				<div class="contact_form">
+				
+						<form action="http://vasterad.com/themes/sensation/contact-form.php" id="page-contact" method="post">
+							<span class="no_error">Your message has been sent. We will contact you as soon as possible.</span>	
+							
+							<div>
+								<label for="name" style="margin-top: 0">Name:</label>
+								<input type="text" name="name" id="name" class="contact_text" size="40" maxlength="60" value="" />
+							</div>
+				
+							<div>
+								<label for="email">Email: <span>*</span></label>
+								<input type="text" name="email" id="email" class="contact_text validate['required','email']" size="40" maxlength="60" value="" />
+							</div>
+									
+							<div>
+								<label for="message">Message: <span>*</span></label>
+								<textarea name="message" id="message" class="contact_textarea validate['required']"></textarea>
+							</div>
+
+							<div class="send_button">
+								<input class="contact_submit" type="submit" name="contact_send" id="contact_send" value="Send Email"/>
+								<input type="hidden" name="action" value="send"/>
+							</div>
+						</form>
+						
+				</div>
+			</div>
+			
+		</div><!-- End Contact Form-->
+		
+		<!-- Contact Details -->
+		<div class="four columns">
+			<h3 class="page_headline">Contact Details</h3>
+			<div class="address_contact"><img style="padding-top: 1px" src="images/address_contact.png" alt="" /><strong>Address:</strong> Aleje Jerozolimskie 30, Warsaw, Poland</div>
+			<div class="address_contact"><img style="padding-top: 1px" src="images/phone_contact.png" alt=""/><strong>Phone:</strong> +44 (0) 560-655-995</div>
+			<div class="address_contact"><img style="padding-top: 3px" src="images/mail_contact.png" alt=""/><strong>Email:</strong><a href="#"> contact@sensation.com</a><br/><br/></div>
+		</div><!-- End Contact Details -->
+		
+	</div>
+	<!-- End 960 Container -->
+
+	<!-- Footer -->
+	<div id="footer">
+	
+		<!-- 960 Container -->
+		<div class="container">
+		
+			<!--  Text Widget - 1/4 Columns -->
+			<div class="four columns">
+				<div id="footer-logo"><img src="images/logo.png" alt="" /></div>
+				<p>Sensation is an incredibly beautiful responsive HTML Template. Nunceasle ullamacorper comodore semas placea.</p>
+				<ul class="social">
+					<li class="facebook"><a href="#"></a> </li>
+					<li class="twitter"><a href="#"></a> </li>
+					<li class="vimeo"><a href="#"></a> </li>
+					<li class="linked"><a href="#"></a> </li>
+					<li class="flickr"><a href="#"></a> </li>
+				  </ul>
+			</div>
+			
+			<!--  Contact - 1/4 Columns -->
+			<div class="four columns">
+				<h4>Contact Details</h4>
+				<div class="address"><img style="padding-top: 1px" src="images/address.png" alt="" /><strong>Address:</strong> Aleje Jerozolimskie 30, Warsaw, Poland</div>
+				<div class="address"><img style="padding-top: 1px" src="images/phone.png" alt=""/><strong>Phone:</strong> +44 (0) 560-655-995</div>
+				<div class="address"><img style="padding-top: 3px" src="images/mail.png" alt=""/><strong>Email:</strong><a href="#"> contact@sensation.com</a></div>
+			</div>
+			
+			<!--  Latest Tweets - 1/4 Columns -->
+			<div class="four columns">
+				<h4>Latest Tweets</h4>
+				<ul id="twitter"></ul>
+					<script type="text/javascript">
+						jQuery.noConflict();
+						jQuery(document).ready(function($){
+						$.getJSON('http://api.twitter.com/1/statuses/user_timeline/envato.json?count=2&amp;callback=?', function(tweets){
+						$("#twitter").html(tz_format_twitter(tweets));
+						}); });
+					</script>
+				<div class="clearfix"></div>
+			</div>
+			
+			<!--  photo Stream - 1/4 Columns -->
+			<div class="four columns">
+				<h4>Photo Stream</h4>
+				<div class="flickr-widget">
+					<script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=8&amp;display=latest&amp;size=s&amp;layout=x&amp;source=user&amp;user=36587311@N08"></script>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			
+		</div><!-- End 960 Container -->
+	</div>
+	
+		<!--  Footer - Copyright-->
+		<div id="footer_bottom">
+			<!-- 960 Container -->
+			<div class="container">
+				
+				<div class="eight columns">
+					<div class="copyright">?Copyright 2012 by <span>Sensation</span>. All Rights Reserved.</div>
+				</div>
+				
+				<div class="eight columns">
+					<div class="author-info">Template by <a href="#">Vasterad</a> for <span>ThemeForest</span>.</div>
+				</div>
+				
+			</div><!-- End 960 Container -->
+		</div>
+	
+		<!-- Back To Top Button -->
+		<div id="backtotop"><a href="#"></a></div>
+	
+<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+</body>
+</html>
