@@ -3,7 +3,7 @@
       <!-- Logo -->
       <div class="four columns">
         <div id="logo">
-          <a href="<?= $host;?>"><img src="images/logo.png" alt="" /></a>
+          <a href="<?= $host;?>"><img src="/images/logo.png" alt="" /></a>
         </div>
       </div>
       <div class="twelve columns">
@@ -11,7 +11,7 @@
           <ul>
             <li><a href="<?= $host;?>">首页</a></li>
             <li><a href="<?= $searchUrl;?>">装修公司</a></li>
-            <li><a href="/contact.php">使用反馈</a></li>
+            <li><a href="/service/feedback" rel="nofollow">使用反馈</a></li>
           </ul>
         </div>
       </div>

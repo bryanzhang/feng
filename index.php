@@ -7,9 +7,8 @@
     <meta name="keywords" content="上海装修,上海建材,上海家具,上海装修网,上海装修公司大全" />
     <meta name="description" content="装修风上海装修建材家具体验馆为你提供上海装修市场上各种装修设计方案，各种物美价廉装修解决方案尽在装修风。" />
     <meta name="baidu-site-verification" content="rrOoagSKIdbRqyzl" />
-    <title>装修风-上海装修公司大盘点,真实评价，免费送50元话费</title>
-    <?php include 'head.php'; ?>
-    <script type="text/javascript" src="js/index.js"></script>
+    <title>装修风 - 上海装修公司、装修风格、装修设计网</title>
+    <?php include 'layout/head.php'; ?>
   </head>
   <body id="top">
     <?php include 'layout/header.php' ?>
@@ -26,4 +25,6 @@
     </div>
     <?php include 'layout/footer.php' ?>
   </body>
+  <?php include 'layout/scripts.php' ?>
+  <script type="text/javascript" src="/js/index.js"></script>
 </html>

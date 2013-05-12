@@ -1,5 +1,5 @@
 <?php
-  $host = "http://www.zhuangxiufeng.com/";
+  require 'feng.conf';
   $searchUrl = $host."search.php";
 
   function companyUrl($Id) {
@@ -9,7 +9,7 @@
 
   // open mysql connection
   function openMysql() {
-    $DBlink = mysql_connect("0.0.0.0","root","19861022",1) or die("Could not connect: ".mysql_error());
+    $DBlink = mysql_connect("106.186.18.220","root","19861022",1) or die("Could not connect: ".mysql_error());
     mysql_select_db("zxfdb",$DBlink) or die("Could not select database");
     mysql_query("SET   NAMES   UTF8");
     return $DBlink;

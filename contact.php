@@ -4,8 +4,7 @@
 ?>
 <html>
   <head>
-    <?php include 'head.php'; ?>
-    <script type="text/javascript" src="js/contact.js"></script>
+    <?php include 'layout/head.php'; ?>
   </head>
   <body>
     <?php include 'layout/header.php' ?>
@@ -51,11 +50,13 @@
 
       <div class="four columns">
         <h3 class="page_headline">联系我们</h3>
-        <div class="address_contact"><img style="padding-top: 1px" src="images/address_contact.png" alt="" /><strong>地址：</strong> 上海市卢湾区太仓路233号</div>
-        <div class="address_contact"><img style="padding-top: 1px" src="images/phone_contact.png" alt=""/><strong>电话：</strong> 021-52358827</div>
-        <div class="address_contact"><img style="padding-top: 3px" src="images/mail_contact.png" alt=""/><strong>Email:</strong><a href="#"> info@zhuangxiufeng.com</a><br/><br/></div>
+        <div class="address_contact"><img style="padding-top: 1px" src="/images/address_contact.png" alt="" /><strong>地址：</strong> 上海市卢湾区太仓路233号</div>
+        <div class="address_contact"><img style="padding-top: 1px" src="/images/phone_contact.png" alt=""/><strong>电话：</strong> 021-52358827</div>
+        <div class="address_contact"><img style="padding-top: 3px" src="/images/mail_contact.png" alt=""/><strong>Email:</strong><a href="#"> info@zhuangxiufeng.com</a><br/><br/></div>
       </div>
     </div>
     <?php include 'layout/footer.php' ?>
   </body>
+  <?php include 'layout/scripts.php' ?>
+  <script type="text/javascript" src="/js/contact.js"></script>
 </html>

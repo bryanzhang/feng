@@ -10,7 +10,7 @@
 ?>
 <html>
   <head>
-    <?php include 'head.php'; ?>
+    <?php include 'layout/head.php'; ?>
     <?php
       $DBlink = openMysql();
       getShopInfo(queryShopById($DBlink, $Id));
@@ -22,18 +22,10 @@
   </head>
   <body>
     <?php include 'layout/header.php' ?>
-    <script type='text/javascript'>
-      var jsonData = {
-        'name' : "<?=$shopname;?>",
-        'id' : <?=$Id;?>
-      };
-    </script>
-    <script type='text/javascript' src="js/reservebox.js"></script>
-    <script type='text/javascript' src="js/company.js"></script>
     <div id="subtitle">
       <div class="container">
         <div class="sixteen columns">
-          <h3><?=$shopname;?></h3>
+          <h1 style="font-size:24px;"><?=$shopname;?></h1>
         </div>
       </div>
     </div>
@@ -46,4 +38,13 @@
     <div id="popup-reserve-mask" class="popup-reserve-mask"></div>
     <?php include 'company/reserve.php' ?>
   </body>
+  <?php include 'layout/scripts.php' ?>
+  <script type='text/javascript'>
+    var jsonData = {
+      'name' : "<?=$shopname;?>",
+      'id' : <?=$Id;?>
+    };
+  </script>
+  <script type='text/javascript' src="/js/reservebox.js"></script>
+  <script type='text/javascript' src="/js/company.js"></script>
 </html>

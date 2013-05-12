@@ -1,7 +1,7 @@
   <div id="footer">
     <div class="container">
       <div class="four columns">
-        <div id="footer-logo"><img src="images/logo.png" alt="" /></div>
+        <div id="footer-logo"><img src="/images/logo.png" alt="" /></div>
           <p>装修风，上海装修公司大盘点</p>
           <p>免费送50元话费</p>
           <p>挑选好的公司，成就家的梦想</p>
@@ -12,9 +12,9 @@
 	</div>							
         <div class="four columns">
 	  <h4>联系方式</h4>
-	  <div class="address"><img style="padding-top: 1px; padding-right:7px;" src="images/address.png" alt=""><strong>地址:</strong> 上海市卢湾区太仓路233号</div>
-	  <div class="address"><img style="padding-top: 1px; padding-right:5px;" src="images/phone.png" alt=""><strong>电话:</strong> 021-52358827</div>
-      <div class="address"><img style="padding-top: 3px; padding-right:3px;" src="images/mail.png" alt=""/><strong>邮箱:</strong> info@zhuangxiufeng.com</div>
+	  <div class="address"><img style="padding-top: 1px; padding-right:7px;" src="/images/address.png" alt=""><strong>地址:</strong> 上海市卢湾区太仓路233号</div>
+	  <div class="address"><img style="padding-top: 1px; padding-right:5px;" src="/images/phone.png" alt=""><strong>电话:</strong> 021-52358827</div>
+      <div class="address"><img style="padding-top: 3px; padding-right:3px;" src="/images/mail.png" alt=""/><strong>邮箱:</strong> info@zhuangxiufeng.com</div>
         </div>
         <div class="four columns">
           <h4>最新微博</h4>

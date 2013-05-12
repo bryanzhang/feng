@@ -282,17 +282,11 @@ function shopItemTemplate(idx, item) {
     image = "";
   }
 
-  /**vincent0429
-  return "<div class=\"comments search\"><div class=\"item-img\" style=\"width:220px; float:left;\"><a  href=\"http://www.zhuangxiufeng.com/company.php?id=" + item.Id + "\" title=\"" +
+  return "<div class=\"comments search\"><div class=\"item-img\" style=\"width:220px; float:left;\"><a href=\"/shop/" + item.Id + "\" title=\"" +
    item.shopname +
-   "\" target=\"_blank\"><img src=\"" + image + "\" alt=\"\" style=\"height:146px; width:220px\"/><div class=\"overlay zoom\"></div>" +
-   "</a></div><div class=\"comment-des search\"><div class=\"comment-by search\"><strong><a href=\"/company.php?id=" +
-    item.Id + "\" >" + item.shopname + "</a></strong><span class=\"reply\"><span style=\"color:#aaa\">/ </span>" + item.score_all + "</span><span class=\"date\" >" + dp_price + "</span></div><li class=\"qualify search\">" + qualification + "</li><div class=\"shopinfo search\">" + abstract + "</div><a href=\"/company.php?id=" + item.Id + "\" class=\"button green large search\">免费预约量房，送50元话费</a></div></div>";**/
-	  return "<div class=\"comments search\"><div class=\"item-img\" style=\"width:220px; float:left;\"><a  href=\"http://www.zhuangxiufeng.com/company.php?id=" + item.Id + "\" title=\"" +
-   item.shopname +
-   "\" target=\"_blank\"><img src=\"" + image + "\" alt=\"\" style=\"height:146px; width:220px\"/><div class=\"overlay zoom\"></div>" +
-   "</a></div><div class=\"comment-des search\"><div class=\"comment-by search\"><strong><a href=\"/company.php?id=" +
-    item.Id + "\"  target=\"_blank\" >" + item.shopname + "</a></strong><span class=\"reply\"><span style=\"color:#aaa\">/ </span>" + item.score_all + "</span><span class=\"date\" >" + dp_price + "</span></div><li class=\"qualify search\">" + qualification + "</li><div class=\"shopinfo search\">" + abstract + "</div><a itemId=\"" + idx + "\" class=\"button green large search\">免费预约量房，送50元话费</a></div></div>";
+   "\" target=\"_blank\"><img src=\"/" + image + "\" alt=\"" + item.shopname + "\" style=\"height:146px; width:220px\"/><div class=\"overlay zoom\"></div>" +
+   "</a></div><div class=\"comment-des search\"><div class=\"comment-by search\"><div style=\"display:inline-block;\"><h2 style=\"font-size:15px;line-height:1.3;\"><strong><a href=\"/shop/" +
+    item.Id + "\"  target=\"_blank\" >" + item.shopname + "</a></strong></h2></div><span class=\"reply\"><span style=\"color:#aaa\">/ </span>" + item.score_all + "</span><span class=\"date\" >" + dp_price + "</span></div><li class=\"qualify search\">" + qualification + "</li><div class=\"shopinfo search\">" + abstract + "</div><a itemId=\"" + idx + "\" class=\"button green large search\">免费预约量房，送50元话费</a></div></div>";
 }
 
 function listenPages() {

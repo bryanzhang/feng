@@ -29,8 +29,8 @@ function getFile($dir)
   <div class="flexslider" style="height:510px; text-align:center; ">
     <ul class="slides" style="height:460px; text-align:center; ">
 	  <?php
-		$picArray=getFile("images/shop/".$shopid_img."/");
-		$pre_dir="images/shop/".$shopid_img."/";
+		$picArray=getFile("/images/shop/".$shopid_img."/");
+		$pre_dir="/images/shop/".$shopid_img."/";
 		$num=0;
 		foreach($picArray as $pic)
 		{
