@@ -1,0 +1,2 @@
+update shop set shopsite='http://www.shbotao.net',shoptype='装修',qualification='建筑装修装饰工程国家一级资质、装饰工程设计乙级资质',foundtime='2002',contactinfo='电话:021-51575218',opentime='9：30-17：30 为了更好的安排 请提前电话预约 021-51575218（24h） 谢谢配合！' where Id=316;
+update shop set shopsite='http://www.shbotao.net',shoptype='装修',qualification='建筑装修装饰工程国家一级资质、装饰工程设计乙级资质',foundtime='2002',contactinfo='电话:021-51575218',opentime='9：30-17：30 为了更好的安排 请提前电话预约 021-51575218（24h） 谢谢配合！' where Id=15;

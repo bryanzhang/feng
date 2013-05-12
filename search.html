@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Sensation</title>
+
+	<!-- Mobile Specific
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" type="text/css"  href="css/style_search.css">
+
+	<!-- JS
+  ================================================== -->
+  	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script src='js/twitter.js'></script>
+	<script type="text/javascript">
+		jQuery.noConflict();
+		jQuery(document).ready(function($){
+
+					// Create the dropdown bases
+					$("<select />").appendTo("#navigation");
+					
+					// Create default option "Go to..."
+					$("<option />", {
+					   "selected": "selected",
+					   "value"   : "",
+					   "text"    : "Menu"
+					}).appendTo("#navigation select");
+					
+					
+					// Populate dropdowns with the first menu items
+					$("#navigation li a").each(function() {
+						var el = $(this);
+						$("<option />", {
+							"value"   : el.attr("href"),
+							"text"    : el.text()
+						}).appendTo("#navigation select");
+					});
+					
+					//make responsive dropdown menu actually work			
+					$("#navigation select").change(function() {
+						window.location = $(this).find("option:selected").val();
+					});
+
+			});
+	</script>
+	
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->	
+
+	<!-- Contact Form Validation - Motools -->	
+	<script type="text/javascript" language="javascript" src="js/contact/m14_p.js"></script> 
+	<script type="text/javascript" language="javascript" src="js/contact/m14_m.js"></script>
+	<script type="text/javascript" language="javascript" src="js/contact/formcheck.js"></script>
+	<script type="text/javascript" language="javascript" src="js/contact/add.js"></script>
+
+
+</head>
+<body>
+
+	<!-- Primary Page Layout
+	================================================== -->
+	
+	<!-- Header -->
+	<div id="header">
+	
+		<!-- 960 Container -->
+		<div class="container">
+		
+			<!-- Logo -->
+			<div class="four columns">
+					<div id="logo"><a href="index-2.html"><img src="images/logo.png" alt="" /></a></div>
+			</div>
+			
+			<div class="twelve columns">
+			
+				<!-- Menu -->
+				<div id="navigation">
+				  <ul>
+					<li><a href="index-2.html">Home</a></li>
+					<li><a href="#">Features</a>
+						<ul>
+							<li><a href="about.html">About Us</a></li>
+							<li><a href="services.html">Services</a></li>
+							<li><a href="testimonials.html">Testimonials</a></li>
+							<li><a href="pricing_tables.html">Pricing Table</a></li>
+							<li><a href="shortcodes.html">Shortcodes</a></li>
+							<li><a href="text_columns.html">Text Columns</a></li>
+							<li><a href="blog_post.html">Single Blog Post</a></li>
+							<li><a href="#">3rd Level</a>
+								<ul>
+									<li><a href="#">Just an</a></li>
+									<li><a href="#">3rd Level</a></li>
+									<li><a href="#">Menu Example</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="portfolio_3.html">Portfolio</a>
+						<ul>
+							<li><a href="portfolio_2.html">2 Columns</a></li>
+							<li><a href="portfolio_3.html">3 Columns</a></li>
+							<li><a href="portfolio_4.html">4 Columns</a></li>
+							<li><a href="single_project.html">Single Project</a></li>
+						</ul>
+					</li>
+					<li><a href="blog.html">Blog</a></li>
+					<li><a id="current" href="contact.html">Contact</a></li>
+				  </ul>
+				</div>			
+	
+			</div>
+		</div>
+	</div><!-- End Header -->
+	
+	<!-- Page Subtitle -->
+	<div id="subtitle">
+	
+		<!-- 960 Container -->
+		<div class="container">
+			<div class="sixteen columns">
+				<div class="search"  style="width:450px; float:right; padding:18px 0px 0px 0;">
+						<input type="text" onblur="if(this.value=='')this.value='搜装修公司查看资质/评价';" onfocus="if(this.value=='搜装修公司查看资质/评价')this.value='';" value="搜装修公司查看资质/评价" class="text" style="width:300px; margin-right:10px; height:20px; font-size:12px;"><a href="#" class="button green large">搜索</a>
+							</div>
+			</div>
+		</div>
+		<!-- End 960 Container -->
+	
+	</div><!-- End Page Subtitle -->
+	
+	<!-- 960 Container -->
+	<div class="container">
+	
+		<!-- Contact Details -->
+		<div class="four columns">
+			<h3 class="page_headline search">综合评级</h3>
+			<div><a href="#" class="button search_left">全部</a></div>
+			<div><a href="#" class="button search_left select">A级</a></div>
+			<div><a href="#" class="button search_left">B级</a></div>
+			<div><a href="#" class="button search_left">C级</a></div>
+
+
+			<h3 class="page_headline search">装修资质</h3>
+			<div><a href="#" class="button search_left select">全部</a></div>
+			<div><a href="#" class="button search_left">国家一级资质</a></div>
+			<div><a href="#" class="button search_left">国家二级资质</a></div>
+			<div><a href="#" class="button search_left">装修协会一级资质</a></div>	
+			<div><a href="#" class="button search_left">装修协会二级资质</a></div>	
+			<div><a href="#" class="button search_left">未通过资质认证</a></div>	
+
+
+			<h3 class="page_headline search">平均价格</h3>
+			<div><a href="#" class="button search_left select">全部</a></div>
+			<div><a href="#" class="button search_left">3~5万</a></div>
+			<div><a href="#" class="button search_left">5~7万</a></div>
+			<div><a href="#" class="button search_left">7~10万</a></div>	
+			<div><a href="#" class="button search_left">10万~15万</a></div>	
+			<div><a href="#" class="button search_left">15万以上</a></div>	
+
+		</div><!-- End Contact Details -->
+
+		<!-- Contact Form -->
+		<div class="twelve columns">
+			<div id="index-filters1">
+				<ul class="option-set search" data-option-key="filter">
+					<li><a href="http://www.zhuangxiufeng.com/" class="selected">全上海</a></li>
+					<li class='index_filter'><a href='http://www.zhuangxiufeng.com/newpudong/'>浦东新区</a></li>
+					<li class='index_filter'><a href='http://www.zhuangxiufeng.com/luwan/'>卢湾区</a></li>
+					<li class='index_filter'><a href='http://www.zhuangxiufeng.com/xuhui/'>徐汇区</a></li>
+					<li class='index_filter'><a href='http://www.zhuangxiufeng.com/changning/'>长宁区</a></li>
+					<li class='index_filter'><a href='http://www.zhuangxiufeng.com/jingan/'>静安区</a></li>					
+					<li class='index_filter'><a href='http://www.zhuangxiufeng.com/huangpu/'>黄浦区</a></li>
+					<li class='index_filter'><a href='http://www.zhuangxiufeng.com/putuo/'>普陀区</a></li>
+					<li class='index_filter'><a href='http://www.zhuangxiufeng.com/zhabei/'>闸北区</a></li>
+				</ul>
+			</div>
+			<div id="index-filters2">
+				<ul class="option-set search" data-option-key="filter">
+					<li class='index_filter'><a href='http://www.zhuangxiufeng.com/yangpu/'>杨浦区</a></li>
+					<li class='index_filter'><a href='http://www.zhuangxiufeng.com/hongkou/'>虹口区</a></li>
+					<li class='index_filter'><a href='http://www.zhuangxiufeng.com/minhang/'>闵行区</a></li>
+					<li class='index_filter'><a href='http://www.zhuangxiufeng.com/baoshan/'>宝山区</a></li>
+					<li class='index_filter'><a href='http://www.zhuangxiufeng.com/jiading/'>嘉定区</a></li>
+					<li class='index_filter'><a href='http://www.zhuangxiufeng.com/songjiang/'>松江区</a></li>
+					<li class='index_filter'><a href='http://www.zhuangxiufeng.com/qingpu/'>青浦区</a></li>
+					<li class='index_filter'><a href='http://www.zhuangxiufeng.com/qita/'>其他</a></li>
+				</ul>
+			</div>
+			<div id="index-filters2" style="padding-left:0px;">
+				<ul class="option-set search" data-option-key="filter">排序：
+					<li class='index_filter'><a href='http://www.zhuangxiufeng.com/yangpu/'  class="selected">按综合评级</a></li>
+					<li class='index_filter'><a href='http://www.zhuangxiufeng.com/hongkou/'>按人均价格</a></li>
+					<li class='index_filter'><a href='http://www.zhuangxiufeng.com/minhang/'>按人气</a></li>
+				</ul>
+			</div>
+			
+			
+			
+			<div class="page_content">
+			
+			
+							<div class="comments search">
+								<div class="item-img" style="width:220px; float:left;"><a href="http://www.zhuangxiufeng.com/company.php?id=15" title="申远空间"  target="_blank"><img src="images/shop/15/1.jpg" alt="" style="height:146px; width:220px"/><div class="overlay zoom"></div></a></div>
+								<div class="comment-des search">
+									<div class="comment-by search">
+										<strong><a href="#">波涛装饰(徐汇设计中心)</a></strong>
+										<span class="reply">
+											<span style="color:#aaa">/ </span>
+											<a href="#">A级</a>
+										</span>
+										<span class="date">158000元</span>
+									</div>
+									<li class="qualify search">建筑装修装饰工程国家一级资质</li>
+									<div class="shopinfo search">“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。</div>
+									<a href="#" class="button green large search">免费预约量房，送50元话费</a>
+								</div>
+							</div>
+							
+
+							<div class="comments search">
+								<div class="item-img" style="width:220px; float:left;"><a href="http://www.zhuangxiufeng.com/company.php?id=15" title="申远空间"  target="_blank"><img src="images/shop/15/1.jpg" alt="" style="height:146px; width:220px"/><div class="overlay zoom"></div></a></div>
+								<div class="comment-des search">
+									<div class="comment-by search">
+										<strong><a href="#">波涛装饰(徐汇设计中心)</a></strong>
+										<span class="reply">
+											<span style="color:#aaa">/ </span>
+											<a href="#">A级</a>
+										</span>
+										<span class="date">158000元</span>
+									</div>
+									<li class="qualify search">未通过资质认证</li>
+									<div class="shopinfo search">“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。</div>
+									<a href="#" class="button green large search">免费预约量房，送50元话费</a>
+								</div>
+							</div>
+							
+							
+							
+							
+														<div class="comments search">
+								<div class="item-img" style="width:220px; float:left;"><a href="http://www.zhuangxiufeng.com/company.php?id=15" title="申远空间"  target="_blank"><img src="images/shop/15/1.jpg" alt="" style="height:146px; width:220px"/><div class="overlay zoom"></div></a></div>
+								<div class="comment-des search">
+									<div class="comment-by search">
+										<strong><a href="#">波涛装饰(徐汇设计中心)</a></strong>
+										<span class="reply">
+											<span style="color:#aaa">/ </span>
+											<a href="#">A级</a>
+										</span>
+										<span class="date">158000元</span>
+									</div>
+									<li class="qualify search">建筑装修装饰工程国家一级资质</li>
+									<div class="shopinfo search">“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。</div>
+									<a href="#" class="button green large search">免费预约量房，送50元话费</a>
+								</div>
+							</div>
+							
+							
+							
+							
+							
+							
+							
+														<div class="comments search">
+								<div class="item-img" style="width:220px; float:left;"><a href="http://www.zhuangxiufeng.com/company.php?id=15" title="申远空间"  target="_blank"><img src="images/shop/15/1.jpg" alt="" style="height:146px; width:220px"/><div class="overlay zoom"></div></a></div>
+								<div class="comment-des search">
+									<div class="comment-by search">
+										<strong><a href="#">波涛装饰(徐汇设计中心)</a></strong>
+										<span class="reply">
+											<span style="color:#aaa">/ </span>
+											<a href="#">A级</a>
+										</span>
+										<span class="date">158000元</span>
+									</div>
+									<li class="qualify search">建筑装修装饰工程国家一级资质</li>
+									<div class="shopinfo search">“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。</div>
+									<a href="#" class="button green large search">免费预约量房，送50元话费</a>
+								</div>
+							</div>
+							
+							
+							
+														<div class="comments search">
+								<div class="item-img" style="width:220px; float:left;"><a href="http://www.zhuangxiufeng.com/company.php?id=15" title="申远空间"  target="_blank"><img src="images/shop/15/1.jpg" alt="" style="height:146px; width:220px"/><div class="overlay zoom"></div></a></div>
+								<div class="comment-des search">
+									<div class="comment-by search">
+										<strong><a href="#">波涛装饰(徐汇设计中心)</a></strong>
+										<span class="reply">
+											<span style="color:#aaa">/ </span>
+											<a href="#">A级</a>
+										</span>
+										<span class="date">158000元</span>
+									</div>
+									<li class="qualify search">建筑装修装饰工程国家一级资质</li>
+									<div class="shopinfo search">“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。</div>
+									<a href="#" class="button green large search">免费预约量房，送50元话费</a>
+								</div>
+							</div>
+							
+							
+							
+														<div class="comments search">
+								<div class="item-img" style="width:220px; float:left;"><a href="http://www.zhuangxiufeng.com/company.php?id=15" title="申远空间"  target="_blank"><img src="images/shop/15/1.jpg" alt="" style="height:146px; width:220px"/><div class="overlay zoom"></div></a></div>
+								<div class="comment-des search">
+									<div class="comment-by search">
+										<strong><a href="#">波涛装饰(徐汇设计中心)</a></strong>
+										<span class="reply">
+											<span style="color:#aaa">/ </span>
+											<a href="#">A级</a>
+										</span>
+										<span class="date">158000元</span>
+									</div>
+									<li class="qualify search">建筑装修装饰工程国家一级资质</li>
+									<div class="shopinfo search">“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。</div>
+									<a href="#" class="button green large search">免费预约量房，送50元话费</a>
+								</div>
+							</div>
+							
+							
+														<div class="comments search">
+								<div class="item-img" style="width:220px; float:left;"><a href="http://www.zhuangxiufeng.com/company.php?id=15" title="申远空间"  target="_blank"><img src="images/shop/15/1.jpg" alt="" style="height:146px; width:220px"/><div class="overlay zoom"></div></a></div>
+								<div class="comment-des search">
+									<div class="comment-by search">
+										<strong><a href="#">波涛装饰(徐汇设计中心)</a></strong>
+										<span class="reply">
+											<span style="color:#aaa">/ </span>
+											<a href="#">A级</a>
+										</span>
+										<span class="date">158000元</span>
+									</div>
+									<li class="qualify search">建筑装修装饰工程国家一级资质</li>
+									<div class="shopinfo search">“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。</div>
+									<a href="#" class="button green large search">免费预约量房，送50元话费</a>
+								</div>
+							</div>
+							
+							<div class="comments search">
+								<div class="item-img" style="width:220px; float:left;"><a href="http://www.zhuangxiufeng.com/company.php?id=15" title="申远空间"  target="_blank"><img src="images/shop/15/1.jpg" alt="" style="height:146px; width:220px"/><div class="overlay zoom"></div></a></div>
+								<div class="comment-des search">
+									<div class="comment-by search">
+										<strong><a href="#">波涛装饰(徐汇设计中心)</a></strong>
+										<span class="reply">
+											<span style="color:#aaa">/ </span>
+											<a href="#">A级</a>
+										</span>
+										<span class="date">158000元</span>
+									</div>
+									<li class="qualify search">建筑装修装饰工程国家一级资质</li>
+									<div class="shopinfo search">“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。“上海家装十强”，建筑装修装饰工程国家一级资质。集团先后荣获“中国装饰知名品牌”、全国装饰装修“百强企业”、上海市装饰装修行业“五星级企业”等一系列光辉荣誉。</div>
+									<a href="#" class="button green large search">免费预约量房，送50元话费</a>
+								</div>
+							</div>							
+
+
+
+
+			</div>
+			
+		</div><!-- End Contact Form-->
+		
+
+		
+	</div>
+	<!-- End 960 Container -->
+
+	<!-- Footer -->
+	<div id="footer">
+	
+		<!-- 960 Container -->
+		<div class="container">
+		
+			<!--  Text Widget - 1/4 Columns -->
+			<div class="four columns">
+				<div id="footer-logo"><img src="images/logo.png" alt="" /></div>
+				<p>Sensation is an incredibly beautiful responsive HTML Template. Nunceasle ullamacorper comodore semas placea.</p>
+				<ul class="social">
+					<li class="facebook"><a href="#"></a> </li>
+					<li class="twitter"><a href="#"></a> </li>
+					<li class="vimeo"><a href="#"></a> </li>
+					<li class="linked"><a href="#"></a> </li>
+					<li class="flickr"><a href="#"></a> </li>
+				  </ul>
+			</div>
+			
+			<!--  Contact - 1/4 Columns -->
+			<div class="four columns">
+				<h4>Contact Details</h4>
+				<div class="address"><img style="padding-top: 1px" src="images/address.png" alt="" /><strong>Address:</strong> Aleje Jerozolimskie 30, Warsaw, Poland</div>
+				<div class="address"><img style="padding-top: 1px" src="images/phone.png" alt=""/><strong>Phone:</strong> +44 (0) 560-655-995</div>
+				<div class="address"><img style="padding-top: 3px" src="images/mail.png" alt=""/><strong>Email:</strong><a href="#"> contact@sensation.com</a></div>
+			</div>
+			
+			<!--  Latest Tweets - 1/4 Columns -->
+			<div class="four columns">
+				<h4>Latest Tweets</h4>
+				<ul id="twitter"></ul>
+					<script type="text/javascript">
+						jQuery.noConflict();
+						jQuery(document).ready(function($){
+						$.getJSON('http://api.twitter.com/1/statuses/user_timeline/envato.json?count=2&amp;callback=?', function(tweets){
+						$("#twitter").html(tz_format_twitter(tweets));
+						}); });
+					</script>
+				<div class="clearfix"></div>
+			</div>
+			
+			<!--  photo Stream - 1/4 Columns -->
+			<div class="four columns">
+				<h4>Photo Stream</h4>
+				<div class="flickr-widget">
+					<script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=8&amp;display=latest&amp;size=s&amp;layout=x&amp;source=user&amp;user=36587311@N08"></script>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			
+		</div><!-- End 960 Container -->
+	</div>
+	
+		<!--  Footer - Copyright-->
+		<div id="footer_bottom">
+			<!-- 960 Container -->
+			<div class="container">
+				
+				<div class="eight columns">
+					<div class="copyright">?Copyright 2012 by <span>Sensation</span>. All Rights Reserved.</div>
+				</div>
+				
+				<div class="eight columns">
+					<div class="author-info">Template by <a href="#">Vasterad</a> for <span>ThemeForest</span>.</div>
+				</div>
+				
+			</div><!-- End 960 Container -->
+		</div>
+	
+		<!-- Back To Top Button -->
+		<div id="backtotop"><a href="#"></a></div>
+	
+<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+</body>
+</html>
